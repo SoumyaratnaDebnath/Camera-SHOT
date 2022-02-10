@@ -1,0 +1,89 @@
+/* mystyle1.css for home.html -- Camera SHOT */
+@font-face{
+	src : url(fonts/MajorMonoDisplay-Regular.ttf);
+	font-family: Major Mono Display;
+}
+@font-face{
+	src : url(fonts/PoiretOne-Regular.ttf);
+	font-family: Poiret One;
+}
+
+.Title1
+{
+	margin-top: 115px;
+	font-style: bold;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	margin-bottom: -20px;
+	font-family: 'Major Mono Display', monospace;
+	font-size: 120px;
+	color: rgba(255,255,255,100%);
+}
+
+.theTitle
+{
+	font-family: 'Poiret One', cursive;
+	font-size: 100px;
+	color:white;
+}
+
+/*
+h1:hover
+{
+	font-size: 100px;
+}
+*/
+
+body
+{
+	/*background: rgba(23, 41, 87, 60);*/
+	background: linear-gradient(to right, magenta, cyan);
+
+}
+
+.button_format
+{
+	font-family: monospace;
+	color:white;
+	background:#4125da;
+	margin-top: 10px;
+	font-size: 17px;
+	width: 350px;
+	height: 80px;
+	font-weight: bold;
+	border-style: none;
+	border-radius: 300px;
+	box-shadow: inset 0 0 0 0 #052134;
+	transition: ease-out 0.5s;
+} 
+
+.button_format:hover
+{
+	box-shadow: inset 400px 0 0 0 #052134;
+	cursor: pointer;
+} 
+
+.button_format:focus
+{
+	outline: 0;
+} 
+
+.upload_format
+{
+	width: 150px;
+	font-family: monospace;
+	font-size: 16px;
+	padding:20px;
+	color: white;
+	background:#4125da;
+	border-radius: 300px;
+	box-shadow: inset 0 0 0 0 #f42069;
+	transition: ease-out 0.5s;
+}
+
+.upload_format:hover
+{
+	box-shadow: inset 200px 0 0 0 #f42069;
+	cursor: pointer;
+} 
+

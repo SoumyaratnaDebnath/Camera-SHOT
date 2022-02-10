@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Camera SHOT</title>
+	<link rel="shotcut icon" type="image/png" href="{{ url_for('static', filename='dependencies/myFabicon.png') }}" />
+	<!-- Fonts Reference
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poiret+One&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='dependencies/mystyle1.css') }}" />
+    <link rel="preload" as="font" href="{{ url_for('static', filename='dependencies/fonts/PoiretOne-Regular.ttf') }}" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" as="font" href="{{ url_for('static', filename='dependencies/fonts/MajorMonoDisplay-Regular.ttf') }}" type="font/ttf" crossorigin="anonymous" />
+</head>
+<body>
+
+	
+	<h1  align="center" class="Title1" style="font-family: 'Major Mono Display', monospace;">CAMERA</h1>
+	<div align='center' class="theTitle" style="font-family: font-family: 'Poiret One', cursive;">SHOT</div>
+
+	<div align='center'>
+		<form action="/image-selected" method="POST"  enctype="multipart/form-data">
+			<label> 
+				<p class = "upload_format" id="ID_1">Choose a Photo</p>
+				<input 	type='file'	
+						required
+						accept="image/jpeg, image/jpg"
+						name='mySrc' 
+						hidden
+						onchange="upload()" />
+			</label>
+			<div>
+				<input  class="button_format" 
+						type='submit' value='UPLOAD' id='btn1'/>
+			</div>
+		</form>
+	</div>
+
+	
+</body>
+
+<script type="text/javascript">
+	function upload()
+	{
+		document.querySelector("#ID_1").innerHTML="Photo Selected";
+	}
+</script>
+
+</html>
+

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Camera SHOT</title>
+	<link rel="shotcut icon" type="image/png" href="{{ url_for('static', filename='dependencies/myFabicon.png') }}" />
+	<!-- Fonts Reference
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">-->
+	<!-- Bootstrap reference
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dependencies/bootstrap.min.css') }}" />	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dependencies/mystyle2.css') }}" />	
+	<link rel="preload" as="font" href="{{ url_for('static', filename='dependencies/fonts/PoiretOne-Regular.ttf') }}" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" as="font" href="{{ url_for('static', filename='dependencies/fonts/MajorMonoDisplay-Regular.ttf') }}" type="font/ttf" crossorigin="anonymous" />
+
+</head>
+<body>
+	
+	<h1  align="center"><a href="/">cAMeRA shot</a></h1>
+
+	<form action="/image-operation" method="POST"  enctype="multipart/form-data">
+		
+		<div class="container">
+
+			<div class="row">
+				
+				<div class="col-md-6">
+				<!-- This divition holds the controllers --> 	
+
+					<!-- This is for the swap property -->
+					<div align="center">
+						<h2 class="head_1 head_color4" align="center">Scheme Swap</h2>
+
+						<input type="radio" name="swap" id="none2" value="none" checked required>
+						<label class="radio3" for="none2">None</label>
+
+						<input type="radio" name="swap" id="rg" value="rg" required>
+						<label class="radio3" for="rg">R  v  G</label>
+							
+						<input type="radio" name="swap" id="gb" value="gb" required>
+						<label class="radio3" for="gb">G  v  B</label>
+						
+						<input type="radio" name="swap" id="br" value="br" required>
+						<label class="radio3" for="br">B  v  R</label>
+					</div>
+				
+					<div class="col-md-6" align="center">
+
+						<!-- This is for the priority property -->
+			
+						<h2 class="head_1" align="center">Scheme Priority</h2>
+						
+						<div>
+							<input type="radio" name="priority" id="none1" value="none" checked required>
+							<label class="radio1" for="none1">None</label>
+						</div>	
+
+						<input type="radio" name="priority" id="rgb" value="rgb" required>
+						<label class="radio1" for="rgb">R > G > B</label>
+
+						<input type="radio" name="priority" id="rbg" value="rbg" required>
+						<label class="radio1" for="rbg">R > B > G</label>	
+
+						<input type="radio" name="priority" id="brg" value="brg" required>
+						<label class="radio1" for="brg">B > R > G</label>	
+
+						<input type="radio" name="priority" id="bgr" value="bgr" required>
+						<label class="radio1" for="bgr">B > G > R</label>	
+
+						<input type="radio" name="priority" id="grb" value="grb" required>
+						<label class="radio1" for="grb">G > R > B</label>	
+
+						<input type="radio" name="priority" id="gbr" value="gbr" required>
+						<label class="radio1" for="gbr">G > B > R</label>
+
+
+						<!-- This is for Color enhancing-->
+						<label class="slider1 myMargin2">
+							Enhance Red
+							<input class="slider" type="range" name="EnhanceRed" min="-100" max="100" value="0">
+						</label>
+						<label class="slider1">
+							Enhance Green
+							<input class="slider" type="range" name="EnhanceGreen" min="-100" max="100" value="0">
+						</label>
+						<label class="slider1">
+							Enhance Blue
+							<input class="slider" type="range" name="EnhanceBlue" min="-100" max="100" value="0">
+						</label>
+
+					</div>
+
+					<div class="col-md-6" align="center">
+
+						<!-- This is for the cast property -->
+						
+						<h2 class="head_1 head_color2" align="center">Scheme Cast</h2>
+						
+						<div>
+							<input type="radio" name="cast" id="none3" value="none" checked required>
+							<label class="radio2" for="none3">None</label>
+						</div>	
+
+						<input type="radio" name="cast" id="rtob" value="rtob" required>
+						<label class="radio2" for="rtob">R to B</label>
+
+						<input type="radio" name="cast" id="rtog" value="rtog" required>
+						<label class="radio2" for="rtog">R to G</label>	
+
+						<input type="radio" name="cast" id="btog" value="btog" required>
+						<label class="radio2" for="btog">B to G</label>	
+
+						<input type="radio" name="cast" id="btor" value="btor" required>
+						<label class="radio2" for="btor">B to R</label>	
+
+						<input type="radio" name="cast" id="gtob" value="gtob" required>
+						<label class="radio2" for="gtob">G to B</label>	
+
+						<input type="radio" name="cast" id="gtor" value="gtor" required>
+						<label class="radio2" for="gtor">G to R</label>
+
+
+
+						<!-- This is for brightness enhancing-->
+						<label class="slider1 slider_color2 myMargin">
+							Improve Brightness
+							<input class="slider" type="range" name="Brightness" min="50" max="150" value="100">
+						</label>
+
+						<!-- This is for contrast enhancing-->
+						<label class="slider1 slider_color2">
+							Improve Contrast
+							<input class="slider" type="range" name="Contrast" min="0" max="200" value="100">
+						</label>	
+
+						<!-- This is for sharpness enhancing-->
+						<label class="slider1 slider_color2">
+							Improve Sharpness
+							<input class="slider" type="range" name="Sharpness" min="0" max="200" value="100">
+						</label>		
+
+					</div>
+
+
+					
+
+				</div>
+				<!-- The controller divition ends here -->
+
+				<div class="col-md-6" align="center">
+				<!-- This divition holds the Cast property and the Image -->
+
+					<!-- This is the submit button for the form -->
+					<div class="col-md-6" align="center">
+					
+						<input  class="button_format" 
+								type='submit' 
+								value="operAte" 
+								id="applyBtn" 
+								onclick="forButton()" />
+					</div>
+					<!-- This is the download button-->
+					<div class="col-md-6" align="center">
+						<a href="{{url_for('download_file')}}">
+							<div align="center" class="download_button_format">
+							downloAd
+							</div>
+						</a>	
+					</div>	
+
+					<!-- This divition is to set the dimension of the image-->
+					<!-- <h2 class="head_1 head_color3" align="center">Output Dimensions</h2> -->
+					<div>
+						<label class="label_format">Preview Dimensions
+							<input 	class = "number_format"
+									type='number'
+									value={{theWidth}}
+									placeholder="Width" 
+									min="60"
+									max="600"
+									required
+									name='myWidth' />
+							<input 	class = "number_format"
+									type='number'
+									value={{theHeight}}
+									placeholder="Height" 
+									min="50"
+									max="400"
+									required
+									name='myHeight' />
+						</label>	
+					<div>
+
+					<img src="{{ url_for('static', filename=ImageSource) }}" 
+						 height = "{{theHeight}}"  
+		 				 width="{{theWidth}}" style="margin-bottom: 15px;" />
+
+				</div>
+
+			</div>
+		</div>
+
+	</form>
+
+</body>
+
+<script type="text/javascript">
+	function forButton(){
+		document.querySelector("#applyBtn").value="wAit";
+	}
+</script>
+
+</html>
