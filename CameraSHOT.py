@@ -3,10 +3,8 @@ from flaskwebgui import FlaskUI
 import os
 from PIL import Image, ImageOps, ImageEnhance
 import numpy as np
-import random
 
-randVar = random.randint(1,1e10)
-IMAGE = 'static/operated/Image_ID_'+str(randVar)+'.jpg'
+IMAGE = 'static/operated/Operated_Image.jpg'
 
 def setHirarchy(r,g,b):
     p=[r,g,b]
